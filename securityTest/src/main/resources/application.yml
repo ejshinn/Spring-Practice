@@ -1,0 +1,69 @@
+# yml 방식
+# 기존의 application.properties 파일의 사용 방식을 :과 tab을 사용하여 중복 입력되는 부분을 최대한 제거한 방식
+# 기존의 속성명 그대로 다 입력
+# . 기호를 사용하여 구분하던 부분을 : 기호를 사용하여 구분
+# : 기호 사용 후 다음 라인으로 변경, 들여쓰기를 통해서 구분함(스페이스바 2칸, 4칸)
+# 해당 속성의 속성값 입력은 기존에는 = 기호를 사용하던 것을 : 기호로 그대로 사용
+# 속성값 입력 시 반드시 공백 1칸을 사용해야 함
+# 동일한 부모 속성을 가질 경우 부모 속성명은 1번만 입력
+# 동일한 공백을 사용한 자식 속성을 입력하여 사용
+
+#server.port=8080
+server:
+    port: 8080
+
+#spring.application.name=security
+spring:
+    application:
+        name: security
+
+    #spring.mvc.hiddenmethod.filter.enabled=true
+    # rest 방식을 사용하기 위한 옵션
+    mvc:
+        hiddenmethod:
+            filter:
+                enabled: true
+
+    #spring.datasource.driver-class-name=org.h2.Driver
+    #spring.datasource.url=jdbc:h2:mem:testdb
+    #spring.datasource.username=java405
+    #spring.datasource.password=java405
+    # 데이터베이스 설정
+    datasource:
+        # H2 데이터베이스 드라이버
+        driver-class-name: org.h2.Driver
+        # H2 데이터베이스 주소
+        #     mem : 내 컴퓨터의 메모리에 위치
+        #     testdb : 데이터베이스명
+        url: jdbc:h2:mem:testdb
+        username: java405
+        # 중요 정보 부분을 운영체제의 환경변수에 추가하고 ${환경변수명} 형태로 입력하여 운영체제의 환경변수 정보값을 가져와서 사용할 수 있음
+        # 윈도우 환경에서는 환경변수 추가 후 반드시 재부팅
+        #password: ${H2_PASSWORD}
+        password: java405
+
+    # H2 데이터베이스 콘솔 설정
+    # http://localhost:8080/h2-console
+    h2:
+        console:
+            # 데이터베이스 콘솔 사용
+            enabled: true
+            # 데이터베이스 콘솔 접속 url
+            path: /h2-console
+
+    jpa:
+        # JPA에서 사용하는 데이터베이스 설정
+        database: H2
+        generate-ddl: true
+        hibernate:
+            ddl-auto: create
+        defer-datasource-initialization: true
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+
+    sql:
+        init:
+            # H2 데이터베이스 사용 시 embedded
+            mode: embedded

@@ -85,3 +85,19 @@
 - **JPA 기능 테스트**:
   - 테이블 생성 및 관계 설정
   - 쿼리 메서드 및 @Query 사용하여 쿼리 작성
+
+
+### 10. Sechedule
+- **스케줄링**: 주기적으로 실행되는 작업을 위한 스케줄링 구현
+
+
+### 11. securityTest
+- **Spring Security**: Spring Security를 활용한 회원가입 및 로그인 기능 구현
+
+
+### 12. security
+- **Spring Security**: Spring Security를 활용한 회원가입, 로그인 및 로그아웃, 게시물 관리 기능 구현
+
+
+### 13. awsweb
+- **서버 업로드**: AWS EC2 서버에 스프링 프로젝트 업로드하기, 필더 패턴

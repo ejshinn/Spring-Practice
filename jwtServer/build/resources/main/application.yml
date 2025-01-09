@@ -1,0 +1,42 @@
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: jwtServer
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: java405
+    password: java405
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    database: H2
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+    show-sql: true
+    properties:
+      hibernate:
+      format_sql: true
+
+  sql:
+    init:
+      mode: embedded
+
+jwt:
+  issuer: jwttoken@bitc.ac.kr
+  secret_key: bisper-jwt-test-token-secret-key

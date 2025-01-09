@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "jwt",
+      "type": "com.bitc.jwtserver.config.jwt.JwtProperties",
+      "sourceType": "com.bitc.jwtserver.config.jwt.JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.issuer",
+      "type": "java.lang.String",
+      "sourceType": "com.bitc.jwtserver.config.jwt.JwtProperties"
+    },
+    {
+      "name": "jwt.secret-key",
+      "type": "java.lang.String",
+      "sourceType": "com.bitc.jwtserver.config.jwt.JwtProperties"
+    }
+  ],
+  "hints": []
+}

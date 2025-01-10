@@ -88,7 +88,7 @@ public class MemberService {
         // 사용자 정보를 데이터베이스에 저장
         memberRepository.save(newMember);
 
-        return "회원 가입 성공";
+        return "회원가입 성공";
     }
 
     // 사용자 삭제
@@ -102,7 +102,7 @@ public class MemberService {
         memberRepository.delete(member);
     }
 
-    // 데이터베이스에 리플레시 토큰이 존재하는지 여부 확인 및 새로운 엑세스 토큰 생성
+    // 데이터베이스에 리프레시 토큰이 존재하는지 여부 확인 및 새로운 엑세스 토큰 생성
     public ResponseDTO refreshAccessToken(String refreshToken) {
 
         // 데이터베이스에 리프레시 토큰이 있을 경우 엑세스 토큰을 새로 발급하고, 없으면 오류 발생

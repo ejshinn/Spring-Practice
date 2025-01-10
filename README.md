@@ -1,4 +1,4 @@
-# Spring-Practice
+# Spring Practice
 
 ### 1. board1
 - **프로젝트 생성**: Spring MVC 게시판 프로젝트 생성
@@ -101,3 +101,9 @@
 
 ### 13. awsweb
 - **서버 업로드**: AWS EC2 서버에 스프링 프로젝트 업로드하기, 필더 패턴
+
+
+### 14. jwtServer
+* react-practice repository 내 jwtReact와 함께 실행
+* JWT 기반의 인증 시스템 구현
+* 회원가입, 로그인, 로그아웃, 게시판
